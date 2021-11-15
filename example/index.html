@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .CodeMirror {
+            height: 100vh;
+        }
+    </style>
+    <link rel="prefetch" href="node_modules/codemirror/lib/codemirror.js">
+    <link rel="stylesheet" href="node_modules/codemirror/addon/edit/matchbrackets.js">
+    <link rel="prefetch" href="node_modules/codemirror-mode-maxima/maxima.js">
+    <title>CodeMirror: Maxima mode</title>
+</head>
+<body>
+Example of CodeMirror mode for Maxima computer algebra system.
+    <form>
+<textarea id="code" name="code">
+foo (x, y) :=
+    block ([a: sin(x), b: cos(y)],
+           'integrate (a*b, x));
+
+map (lambda ([z], foo (u, z)), [2*x^4, 4*x^6, 8*x^12]);
+</textarea>
+    </form>
+
+    <script src="node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="node_modules/codemirror-mode-maxima/maxima.js"></script>
+    <script>
+        const editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            mode: "maxima",
+            smartIndent: true,
+            tabSize: 4,
+            indentWithTabs: true,
+            lineNumbers: true,
+            matchBrackets: true,
+            autofocus: true,
+        });
+    </script>
+</body>
+</html>
