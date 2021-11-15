@@ -1,0 +1,23 @@
+{
+  "name": "codemirror-mode-maxima",
+  "version": "1.0.0",
+  "description": "CodeMirror mode for Maxima computer algebra system",
+  "main": "maxima.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-dodier/codemirror-mode-maxima.git"
+  },
+  "keywords": [
+    "codemirror",
+    "maxima"
+  ],
+  "author": "Robert Dodier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robert-dodier/codemirror-mode-maxima/issues"
+  },
+  "homepage": "https://github.com/robert-dodier/codemirror-mode-maxima#readme",
+  "dependencies": {
+    "codemirror": "^5.11"
+  }
+}
